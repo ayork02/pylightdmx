@@ -1,0 +1,69 @@
+{
+	"name": "ExampleRig",
+	"fixtures": {
+		"LED1": {
+			"address": 1,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"LED2": {
+			"address": 7,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"LED3": {
+			"address": 13,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"LED4": {
+			"address": 19,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"LED5": {
+			"address": 25,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"LED6": {
+			"address": 31,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"Dimmer1": {
+			"address": 61,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Dimmer2": {
+			"address": 62,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Dimmer3": {
+			"address": 63,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Dimmer4": {
+			"address": 64,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Dimmer5": {
+			"address": 65,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Dimmer6": {
+			"address": 67,
+			"brand": "Generic",
+			"model": "Dimmer"
+		}
+	},
+	"groups": {
+		"LEDs": ["LED1", "LED2", "LED3", "LED4", "LED5", "LED6"],
+		"Dimmers": ["Dimmer1", "Dimmer2", "Dimmer3", "Dimmer4", "Dimmer5", "Dimmer6"]
+	}
+}

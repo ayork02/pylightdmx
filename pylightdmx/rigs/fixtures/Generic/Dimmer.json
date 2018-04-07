@@ -1,0 +1,13 @@
+{
+	"manufacturer": "Generic",
+	"name": "Dimmer",
+	"shortName": "Par",
+	"type": "Intensity",
+	"channels": 1,
+	"availableChannels": {
+		"intensity": {
+			"offset": 0,
+			"type": "intensity"
+		}
+	}
+}

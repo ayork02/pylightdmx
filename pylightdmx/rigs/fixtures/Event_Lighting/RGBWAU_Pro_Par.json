@@ -1,0 +1,39 @@
+{
+	"manufacturer": "Event Lighting",
+	"name": "RGBWAU Pro Par",
+	"shortName": "RGBWAU",
+	"type": "Colour Changer",
+	"channels": 6,
+	"availableChannels": {
+		"red": {
+			"offset": 0,
+			"type": "colour",
+			"colour": "red"
+		},
+		"green": {
+			"offset": 1,
+			"type": "colour",
+			"colour": "green"
+		},
+		"blue": {
+			"offset": 2,
+			"type": "colour",
+			"colour": "blue"
+		},
+		"white": {
+			"offset": 3,
+			"type": "colour",
+			"colour": "white"
+		},
+		"amber": {
+			"offset": 4,
+			"type": "colour",
+			"colour": "amber"
+		},
+		"UV": {
+			"offset": 5,
+			"type": "colour",
+			"colour": "UV"
+		}
+	}
+}

@@ -1,0 +1,319 @@
+{
+	"name": "Mini Spot Moving Head",
+	"shortName": "Mini Spot",
+	"type": "Moving Head",
+	"channels": 14,
+	"availableChannels": {
+		"pan": {
+			"offset": 0,
+			"range": 540,
+			"type": "pan"
+
+		},
+		"pan fine": {
+			"offset": 1,
+			"type": "pan fine"
+		},
+		"tilt": {
+			"offset": 2,
+			"range": 270,
+			"type": "tilt"
+		},
+		"tilt fine": {
+			"offset": 3,
+			"type": "tilt fine"
+		},
+		"pan/tilt speed": {
+			"offset": 4,
+			"type": "speed"
+		},
+		"dimmer/strobe": {
+			"offset": 5,
+			"type": "macros",
+			"capabilities": {
+				"closed": {
+					"startVal": 0, 
+					"endVal": 7
+				},
+				"intensity 100-0%": {
+					"startVal": 8, 
+					"endVal": 134
+				},
+				"strobe slow-fast": {
+					"startVal": 135, 
+					"endVal": 239
+				},
+				"open": {
+					"startVal": 240,
+					"endVal": 255
+				}
+			}
+		},
+		"red": {
+			"offset": 6,
+			"type": "colour",
+			"colour": "red"
+		},
+		"green": {
+			"offset": 7,
+			"type": "colour",
+			"colour": "green"
+		},
+		"blue": {
+			"offset": 8,
+			"type": "colour",
+			"colour": "blue"
+		},
+		"white": {
+			"offset": 9,
+			"type": "colour",
+			"colour": "white"
+		},
+		"colour macros": {
+			"offset": 10,
+			"type": "macros",
+			"capabilities": {
+				"no function": {
+					"startVal": 0,
+					"endVal": 7
+				},
+				"white": {
+					"startVal": 8,
+					"endVal": 22
+				},
+				"red": {
+					"startVal": 22, 
+					"endVal": 34
+				},
+				"green": {
+					"startVal": 36, 
+					"endVal": 49
+				},
+				"blue": {
+					"startVal": 50, 
+					"endVal": 63
+				},
+				"cyan": {
+					"startVal": 64, 
+					"endVal": 77
+				},
+				"magenta": {
+					"startVal": 78, 
+					"endVal": 91
+				},
+				"yellow": {
+					"startVal": 92, 
+					"endVal": 105
+				},
+				"purple": {
+					"startVal": 106, 
+					"endVal": 119
+				},
+				"orange": {
+					"startVal": 120, 
+					"endVal": 133
+				},
+				"chartreuse": {
+					"startVal": 134, 
+					"endVal": 147
+				},
+				"pink": {
+					"startVal": 148, 
+					"endVal": 161
+				},
+				"brown": {
+					"startVal": 162, 
+					"endVal": 175
+				},
+				"gold": {
+					"startVal": 176, 
+					"endVal": 189
+				},
+				"crimson": {
+					"startVal": 190, 
+					"endVal": 203
+				},
+				"violet": {
+					"startVal": 204, 
+					"endVal": 217
+				},
+				"crape": {
+					"startVal": 218, 
+					"endVal": 231
+				},
+				"colour change": {
+					"startVal": 232, 
+					"endVal": 255
+				}
+			}
+		},
+		"colour speed": {
+			"offset": 11,
+			"type": "speed"
+		},
+		"movement macros": {
+			"offset": 12,
+			"type": "macros",
+			"capabilities": [
+				{
+					"range": [0, 7],
+					"name": "no function" 
+				},
+				{
+					"range": [8, 22],
+					"name": "auto program 1"
+				},
+				{
+					"range": [23, 37],
+					"name": "auto program 2"
+				},
+				{
+					"range": [38, 52],
+					"name": "auto program 3"
+				},
+				{
+					"range": [53, 67],
+					"name": "auto program 4"
+				},
+				{
+					"range": [68, 82],
+					"name": "auto program 5"
+				},
+				{
+					"range": [83, 97],
+					"name": "auto program 6"
+				},
+				{
+					"range": [98, 112],
+					"name": "auto program 7"
+				},
+				{
+					"range": [113, 127],
+					"name": "auto program 8"
+				},
+				{
+					"range": [128, 142],
+					"name": "sound active 1"
+				},
+				{
+					"range": [143, 157],
+					"name": "sound active 2"
+				},
+				{
+					"range": [158, 172],
+					"name": "sound active 3"
+				},
+				{
+					"range": [173, 187],
+					"name": "sound active 4"
+				},
+				{
+					"range": [188, 202],
+					"name": "sound active 5"
+				},
+				{
+					"range": [203, 217],
+					"name": "sound active 6"
+				},
+				{
+					"range": [218, 232],
+					"name": "sound active 7"
+				},
+				{
+					"range": [233, 255],
+					"name": "sound active 8"
+				}
+			]
+		},
+		"gobos": {
+			"offset": 13,
+			"type": "macros",
+			"capabilities": {
+				"open": {
+					"startVal": 0,
+					"endVal": 7
+				},
+				"gobo1": {
+					"startVal": 8,
+					"endVal": 15
+				},
+				"gobo2": {
+					"startVal": 16,
+					"endVal": 23
+				},
+				"gobo3": {
+					"startVal": 24,
+					"endVal": 31
+				},
+				"gobo4": {
+					"startVal": 32,
+					"endVal": 39
+				},
+				"gobo5": {
+					"startVal": 40, 
+					"endVal": 47
+				},
+				"gobo6": {
+					"startVal": 48,
+					"endVal": 55
+				},
+				"gobo7": {
+					"startVal": 56,
+					"endVal": 63
+				},
+				"gobo8": {
+					"startVal": 64,
+					"endVal": 71
+				},
+				"gobo9": {
+					"startVal": 72,
+					"endVal": 79
+				},
+				"gobo1 shake": {
+					"startVal": 80,
+					"endVal": 94
+				},
+				"gobo2 shake": {
+					"startVal": 95,
+					"endVal": 109
+				},
+				"gobo3 shake": {
+					"startVal": 110,
+					"endVal": 124
+				},
+				"gobo4 shake": {
+					"startVal": 125,
+					"endVal": 139
+				},
+				"gobo5 shake": {
+					"startVal": 140,
+					"endVal": 154
+				},
+				"gobo6 shake": {
+					"startVal": 155,
+					"endVal": 169
+				},
+				"gobo7 shake": {
+					"startVal": 170,
+					"endVal": 184
+				},
+				"gobo8 shake": {
+					"startVal": 185,
+					"endVal": 199
+				},
+				"gobo9 shake": {
+					"startVal": 200,
+					"endVal": 214
+				},
+				"positive rainbow effect": {
+					"startVal": 215,
+					"endVal": 235
+				},
+				"negative rainbow effect": {
+					"startVal": 236,
+					"endVal": 255
+				}
+			}
+		}
+	}
+}
