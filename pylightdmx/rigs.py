@@ -45,6 +45,14 @@ class FixtureGroup:
 	def set_intensity(self, val):
 		for fixture in self.g.keys():
 			self.g[fixture].set_intensity(val)
+
+	def focus(self):
+		for fixture in self.g.keys():
+			self.g[fixture].focus()
+		
+	def set_focus(self, val):
+		for fixture in self.g.keys():
+			self.g[fixture].set_focus(val)
 		
 	def pan(self):
 		for fixture in self.g.keys():

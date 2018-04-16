@@ -1,0 +1,24 @@
+{
+	"manufacturer": "Generic",
+	"name": "RGB",
+	"shortName": "RGB",
+	"type": "Colour Changer",
+	"channels": 3,
+	"availableChannels": {
+		"red": {
+			"offset": 0,
+			"type": "colour",
+			"colour": "red"
+		},
+		"green": {
+			"offset": 1,
+			"type": "colour",
+			"colour": "green"
+		},
+		"blue": {
+			"offset": 2,
+			"type": "colour",
+			"colour": "blue"
+		}
+	}
+}

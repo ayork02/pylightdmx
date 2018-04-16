@@ -1,0 +1,169 @@
+{
+	"name": "iMove-8s",
+	"shortName": "IM-8S",
+	"type": "Moving Head",
+	"channels": 8,
+	"availableChannels": {
+		"pan": {
+			"offset": 0,
+			"range": 540,
+			"type": "pan"
+		},
+		"tilt": {
+			"offset": 1,
+			"range": 270,
+			"type": "tilt"
+		},
+		"dimmer/strobe": {
+			"offset": 2,
+			"type": "macros",
+			"capabilities": {
+				"blackout": {
+					"startVal": 0, 
+					"endVal": 7
+				},
+				"open": {
+					"startVal": 8, 
+					"endVal": 15
+				},
+				"shutter speed slow-fast": {
+					"startVal": 16, 
+					"endVal": 131
+				},
+				"shutter speed shaking slow-fast": {
+					"startVal": 132,
+					"endVal": 247
+				},
+				"open": {
+					"startVal": 248,
+					"endVal": 255
+				}
+			}
+		},
+		"gobos": {
+			"offset": 3,
+			"type": "macros",
+			"capabilities": {
+				"open": {
+					"startVal": 0,
+					"endVal": 15
+				},
+				"gobo1": {
+					"startVal": 16,
+					"endVal": 31
+				},
+				"gobo2": {
+					"startVal": 32,
+					"endVal": 47
+				},
+				"gobo3": {
+					"startVal": 48,
+					"endVal": 63
+				},
+				"gobo4": {
+					"startVal": 64,
+					"endVal": 79
+				},
+				"gobo5": {
+					"startVal": 80, 
+					"endVal": 95
+				},
+				"gobo6": {
+					"startVal": 96,
+					"endVal": 111
+				},
+				"gobo7": {
+					"startVal": 112,
+					"endVal": 127
+				},
+				"gobo change slow-fast": {
+					"startVal": 128,
+					"endVal": 255
+				}
+		},
+		"colour macros": {
+			"offset": 4,
+			"type": "macros",
+			"capabilities": {
+				"white": {
+					"startVal": 0,
+					"endVal": 12
+				},
+				"green": {
+					"startVal": 13, 
+					"endVal": 25
+				},
+				"magenta": {
+					"startVal": 26, 
+					"endVal": 38
+				},
+				"light blue": {
+					"startVal": 39, 
+					"endVal": 51
+				},
+				"yellow": {
+					"startVal": 52, 
+					"endVal": 63
+				},
+				"orange": {
+					"startVal": 64, 
+					"endVal": 76
+				},
+				"blue": {
+					"startVal": 77, 
+					"endVal": 89
+				},
+				"uv purple": {
+					"startVal": 90, 
+					"endVal": 102
+				},
+				"light green": {
+					"startVal": 103, 
+					"endVal": 115
+				},
+				"pink": {
+					"startVal": 116, 
+					"endVal": 127
+				},
+				"rainbow slow-fast": {
+					"startVal": 128, 
+					"endVal": 255
+				}
+			}
+		},
+		"gobo rotation": {
+			"offset": 5,
+			"type": "macros",
+			"capabilities": {
+				"stopped": {
+					"startVal": 0,
+					"endVal": 9
+				},
+				"counterclockwise slow-fast": {
+					"startVal": 10, 
+					"endVal": 120
+				},
+				"stopped": {
+					"startVal": 121, 
+					"endVal": 134
+				},
+				"clockwise slow-fast": {
+					"startVal": 135, 
+					"endVal": 245
+				},
+				"stopped": {
+					"startVal": 246, 
+					"endVal": 255
+				}
+			}
+		},
+		"intensity": {
+			"offset": 6,
+			"type": "intensity"
+		},
+		"focus": {
+			"offset": 7,
+			"type": "focus"
+		}
+	}
+}

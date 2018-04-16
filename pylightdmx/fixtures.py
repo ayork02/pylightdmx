@@ -42,6 +42,17 @@ class Fixture():
 			val = int(percent * 255)
 			self.link.set_chan(self.address + self.intensity_offset, val)
 
+	def focus(self):
+		self.focus_offset = self.data["availableChannels"]["focus"]["offset"]
+
+	def set_focus(self, val):
+		if isinstance(val, int) == True:
+			self.link.set_chan(self.address + self.focus_offset, val)
+		elif "%" in val:
+			percent = float(val.strip('%'))/100
+			val = int(percent * 255)
+			self.link.set_chan(self.address + self.focus_offset, val)
+
 	def pan(self):
 		self.pan_offset = self.data["availableChannels"]["pan"]["offset"]
 		self.range = self.data["availableChannels"]["pan"]["range"]

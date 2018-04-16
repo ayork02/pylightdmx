@@ -1,0 +1,170 @@
+{
+	"name": "CulturalCentre",
+	"fixtures": {
+		"Par1": {
+			"address": 1,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par2": {
+			"address": 2,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par3": {
+			"address": 3,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par4": {
+			"address": 4,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par5": {
+			"address": 5,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par6": {
+			"address": 6,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par7": {
+			"address": 7,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par8": {
+			"address": 8,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par9": {
+			"address": 9,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par10": {
+			"address": 10,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par11": {
+			"address": 11,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par12": {
+			"address": 12,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par13": {
+			"address": 17,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par14": {
+			"address": 18,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par15": {
+			"address": 19,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par16": {
+			"address": 20,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par17": {
+			"address": 21,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par18": {
+			"address": 22,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par19": {
+			"address": 23,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"Par20": {
+			"address": 24,
+			"brand": "Generic",
+			"model": "Dimmer"
+		},
+		"LED1": {
+			"address": 25,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"LED2": {
+			"address": 31,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"LED3": {
+			"address": 37,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"LED4": {
+			"address": 43,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"LED5": {
+			"address": 49,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"LED6": {
+			"address": 55,
+			"brand": "Event_Lighting",
+			"model": "RGBWAU_Pro_Par"
+		},
+		"Cyc1": {
+			"address": 61,
+			"brand": "Generic",
+			"model": "RGB"
+		},
+		"Cyc2": {
+			"address": 64,
+			"brand": "Generic",
+			"model": "RGB"
+		},
+		"Cyc3": {
+			"address": 67,
+			"brand": "Generic",
+			"model": "RGB"
+		},
+		"Cyc4": {
+			"address": 70,
+			"brand": "Generic",
+			"model": "RGB"
+		},
+		"Cyc5": {
+			"address": 73,
+			"brand": "Generic",
+			"model": "RGB"
+		},
+		"Cyc6": {
+			"address": 76,
+			"brand": "Generic",
+			"model": "RGB"
+		}
+	},
+	"groups": {
+		"Pars": ["Par1", "Par2", "Par3", "Par4", "Par5", "Par6", "Par7", "Par8", "Par9", "Par10", "Par11", "Par12", "Par13", "Par14", "Par15", "Par16", "Par17", "Par18", "Par19", "Par20"],
+		"LEDs": ["LED1", "LED2", "LED3", "LED4", "LED5", "LED6"],
+		"Cycs": ["Cyc1", "Cyc2", "Cyc3", "Cyc4", "Cyc5", "Cyc6"]
+	}
+}
