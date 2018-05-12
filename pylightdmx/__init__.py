@@ -5,8 +5,8 @@ import threading
 
 start_val   = 0x7E
 end_val     = 0xE7
-output1      = 6
-output2      = 202
+output1     = 6
+output2     = 202
 
 class DMXConnection:
 	def __init__(self, port):
@@ -28,13 +28,13 @@ class DMXConnection:
 	
 	def set_chan(self, chan, val, auto_render = False):
 		if not 1 <= chan <= 512:
-			print("Invalid channel specified: %s' % str(chan)")
+			print("Invalid channel specified: %s" % str(chan))
 		val = max(0, min(val, 255)) # restrict value
 		self.chan_list[chan] = val
 		if auto_render == True:
 			self.render()
 
-	def render(self, output = 1, clear = True):
+	def render(self, output = 1, clear = True, newlist = True):
 		if output == 2:
 			label = output2
 		else:
@@ -54,7 +54,9 @@ class DMXConnection:
 		packet += self.dmx_frame
 		packet.append(end_val)
 		self.port.write(packet)
-		self.chan_list.clear()		
+		self.chan_list.clear()
+		if newlist == True:
+			self.chan_list.clear()				
 
 	def fade(self, chan, val, secs = 3):
 		val = max(0, min(val, 255))
@@ -64,28 +66,32 @@ class DMXConnection:
 			while True:
 				value = self.dmx_frame[chan] + 3
 				self.set_chan(chan, value)
-				self.render(clear = False)
+				self.render(clear = False, newlist = False)
 				time.sleep(pause)
 				print(self.dmx_frame[chan])
 				if self.dmx_frame[chan] >= val - 3:
 					self.set_chan(chan, val)
-					self.render(clear = False)
+					self.render(clear = False, newlist = False)
 					break
 		elif val < orig_val: # fade out
 			pause = 1 / (abs(val - orig_val) / secs / 3)
 			while True:
 				value = self.dmx_frame[chan] - 3
 				self.set_chan(chan, value)
+				self.render(clear = False, newlist = False)
 				time.sleep(pause)
 				if self.dmx_frame[chan] <= val + 3:
 					self.set_chan(chan, val)
-					self.render(clear = False)
+					self.render(clear = False, newlist = False)
 					break
 		elif val == orig_val:
 			pass
 		
 	def generate(self, secs = 3):
-		for chan in self.chan_list.keys():
+		for i in range(0, 512):  
+			if i not in self.chan_list.keys():
+				self.dmx_frame[i] = 0
+		for chan in set(self.chan_list.keys()):
 			threading.Thread(target = self.fade, args = [chan, self.chan_list[chan], secs]).start()
 		main_thread = threading.current_thread()
 		for t in threading.enumerate():

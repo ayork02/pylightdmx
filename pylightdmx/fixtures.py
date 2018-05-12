@@ -42,6 +42,17 @@ class Fixture():
 			val = int(percent * 255)
 			self.link.set_chan(self.address + self.intensity_offset, val)
 
+	def strobe(self):
+		self.strobe_offset = self.data["availableChannels"]["strobe"]["offset"]
+
+	def set_strobe(self, val):
+		if isinstance(val, int) == True:
+			self.link.set_chan(self.address + self.strobe_offset, val)
+		elif "%" in val:
+			percent = float(val.strip('%'))/100
+			val = int(percent * 255)
+			self.link.set_chan(self.address + self.strobe_offset, val)
+
 	def focus(self):
 		self.focus_offset = self.data["availableChannels"]["focus"]["offset"]
 
@@ -107,5 +118,5 @@ class Fixture():
 	def list_channels(self):
 		return list(self.data["availableChannels"].keys())
 
-available_controls = ["intensity", "pan", "tilt", "speed", "macros"]
+available_controls = ["intensity", "pan", "tilt", "speed", "macros", "focus", "strobe"]
 rgb_channels = ["red", "green", "blue"]
