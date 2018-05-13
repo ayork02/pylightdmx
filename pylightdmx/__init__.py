@@ -1,3 +1,7 @@
+# __init__.py
+
+"""Basic lighting controller for Enttec DMX USB Pro Mk2"""
+
 import serial
 import sys
 import time
@@ -9,7 +13,25 @@ output1     = 6
 output2     = 202
 
 class DMXConnection:
-	def __init__(self, port):
+	def __init__(self, port, output = 1):
+		"""Creates a connection to the DMX device.
+
+		Parameters
+		----------
+		port
+			On Windows, port is the port number.
+        	On Linux and macOS, port is the path to the serial device.
+        output: int, optional(default=1)
+			DMX output connected on DMX device.
+			Unless output 2 is specified, configures to output 1.
+
+        Examples
+        --------
+        >>> dmx = pylightdmx.DMXConnection(4) # Windows
+        Opened COM4
+        >>> dmx = pylightdmx.DMXConnection('/dev/ttyUSB0') # Linux
+        Opened ttyUSB0
+        """
 		if isinstance(port, int) == True: # Windows
 			try:
 				self.port = serial.Serial('COM%s' % (str(port)), 57600, timeout=1)
@@ -25,21 +47,49 @@ class DMXConnection:
 		print("Opened %s" % (self.port.portstr))
 		self.dmx_frame = [0] * 512
 		self.chan_list = {}
+		self.output = output
 	
 	def set_chan(self, chan, val, auto_render = False):
+		"""Sets a channel level in local channel list.
+
+		Parameters
+		----------
+		chan: int
+			DMX channel to be assigned a value.
+			Must be between 1 and 512.
+		val: int
+			Value to be assigned to DMX channel.
+			Must be between 0 and 255.
+		auto_render: bool, optional(default=False)
+			If set to true, executes the set DMX channel.
+
+		Raises
+		------
+		ValueError
+			If the channel is not between 1 and 512.
+		"""
 		if not 1 <= chan <= 512:
-			print("Invalid channel specified: %s" % str(chan))
-		val = max(0, min(val, 255)) # restrict value
+			raise ValueError("Invalid channel specified: %s" % str(chan))
+		val = max(0, min(val, 255)) # Restrict value
 		self.chan_list[chan] = val
 		if auto_render == True:
 			self.render()
 
-	def render(self, output = 1, clear = True, newlist = True):
-		if output == 2:
+	def render(self, clear = True, newlist = True):
+		"""Executes values in channel list.
+
+		Parameters
+		----------
+		clear: bool, optional(default=True)
+			If set to true, clears channels not in channel list.
+		newlist: bool, optional(default=True)
+			If set to true, clears the channel list.
+		"""
+		if self.output == 2:
 			label = output2
 		else:
 			label = output1
-		if clear == True: # clear channels not specified
+		if clear == True: # Clear channels not specified
 			for i in range(0, 512):  
 				if i not in self.chan_list.keys():
 					self.dmx_frame[i] = 0
@@ -59,9 +109,22 @@ class DMXConnection:
 			self.chan_list.clear()				
 
 	def fade(self, chan, val, secs = 3):
+		"""Fades a single channel to specified value.
+
+		Parameters
+		----------
+		chan: int
+			DMX channel to be assigned a value.
+			Must be between 1 and 512.
+		val: int
+			Value to be assigned to DMX channel.
+			Must be between 0 and 255.
+		secs: int, optional(default=3)
+			Determines how many seconds to fade the channel to specified value.
+		"""
 		val = max(0, min(val, 255))
 		orig_val = self.dmx_frame[chan]
-		if val > orig_val: # fade
+		if val > orig_val: # Fade in
 			pause = 1 / ((val - orig_val) / secs / 3)
 			while True:
 				value = self.dmx_frame[chan] + 3
@@ -73,7 +136,7 @@ class DMXConnection:
 					self.set_chan(chan, val)
 					self.render(clear = False, newlist = False)
 					break
-		elif val < orig_val: # fade out
+		elif val < orig_val: # Fade out
 			pause = 1 / (abs(val - orig_val) / secs / 3)
 			while True:
 				value = self.dmx_frame[chan] - 3
@@ -88,6 +151,13 @@ class DMXConnection:
 			pass
 		
 	def generate(self, secs = 3):
+		"""Fades all channels in channel list.
+
+		Parameters
+		----------
+		secs: int, optional(default=3)
+			Determines how many seconds to fade the channels to the specified values.
+		"""
 		for i in range(0, 512):  
 			if i not in self.chan_list.keys():
 				self.dmx_frame[i] = 0
@@ -101,8 +171,10 @@ class DMXConnection:
 		self.chan_list.clear()
 
 	def DBO(self):
+		"""Sets all channels to 0, causing a dead blackout"""
 		self.dmx_frame = [0] * 512
-		self.render() # Auto Renders
+		self.render() # Auto renders
 		
 	def close(self):
+		"""Closes connection to DMX device."""
 		self.port.close()
