@@ -29,12 +29,12 @@ class DMXConnection:
         --------
         >>> dmx = pylightdmx.DMXConnection(4) # Windows
         Opened COM4
-        >>> dmx = pylightdmx.DMXConnection('/dev/ttyUSB0') # Linux
+        >>> dmx = pylightdmx.DMXConnection("/dev/ttyUSB0") # Linux
         Opened ttyUSB0
         """
-		if isinstance(port, int) == True: # Windows
+		if isinstance(port, int): # Windows
 			try:
-				self.port = serial.Serial('COM%s' % (str(port)), 57600, timeout=1)
+				self.port = serial.Serial("COM%s" % (str(port)), 57600, timeout=1)
 			except:
 				print("Could not open device COM%s. Quitting application." % port)
 				sys.exit(0)
@@ -131,7 +131,6 @@ class DMXConnection:
 				self.set_chan(chan, value)
 				self.render(clear = False, newlist = False)
 				time.sleep(pause)
-				print(self.dmx_frame[chan])
 				if self.dmx_frame[chan] >= val - 3:
 					self.set_chan(chan, val)
 					self.render(clear = False, newlist = False)

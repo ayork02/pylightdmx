@@ -104,7 +104,7 @@ class Fixture():
 		>>> Par.set_intensity("75%")
 		>>> dmx.render()
 		"""
-		if isinstance(val, int) == True:
+		if isinstance(val, int):
 			self.link.set_chan(self.address + self.intensity_offset, val)
 		elif "%" in val:
 			percent = float(val.strip('%'))/100
@@ -123,7 +123,7 @@ class Fixture():
 		val
 			Value(int) or percentage(str) to set the strobe of the fixture to.
 		"""
-		if isinstance(val, int) == True:
+		if isinstance(val, int):
 			self.link.set_chan(self.address + self.strobe_offset, val)
 		elif "%" in val:
 			percent = float(val.strip('%'))/100
@@ -142,7 +142,7 @@ class Fixture():
 		val
 			Value(int) or percentage(str) to set the focus of the fixture to.
 		"""
-		if isinstance(val, int) == True:
+		if isinstance(val, int):
 			self.link.set_chan(self.address + self.focus_offset, val)
 		elif "%" in val:
 			percent = float(val.strip('%'))/100
@@ -172,7 +172,7 @@ class Fixture():
 		>>> MH.set_pan("180*")
 		>>> dmx.render()
 		"""
-		if isinstance(val, int) == True:
+		if isinstance(val, int):
 			 self.link.set_chan(self.address + self.pan_offset, val)
 		elif "*" in val:
 			angle = float(val.strip("*"))
@@ -193,7 +193,7 @@ class Fixture():
 		val
 			Value(int) or angle(str) to set the tilt of the fixture to.
 		"""
-		if isinstance(val, int) == True:
+		if isinstance(val, int):
 			 self.link.set_chan(self.address + self.tilt_offset, val)
 		elif "*" in val:
 			angle = float(val.strip("*"))
