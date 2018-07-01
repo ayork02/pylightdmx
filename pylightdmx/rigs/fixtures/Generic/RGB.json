@@ -2,7 +2,7 @@
 	"manufacturer": "Generic",
 	"name": "RGB",
 	"shortName": "RGB",
-	"type": "Colour Changer",
+	"type": "colour changer",
 	"channels": 3,
 	"availableChannels": {
 		"red": {

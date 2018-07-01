@@ -1,7 +1,7 @@
 {
 	"manufacturer": "Generic",
-	"name": "Dimmer",
-	"shortName": "Par",
+	"name": "Smoke Machine",
+	"shortName": "Smoke",
 	"type": "intensity",
 	"channels": 1,
 	"availableChannels": {
