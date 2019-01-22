@@ -11,6 +11,8 @@ start_val   = 0x7E
 end_val     = 0xE7
 output1     = 6
 output2     = 202
+api_key     = [0xC9, 0xA4, 0x03, 0xE4]
+port_set	= [1, 1]
 
 class DMXConnection:
 	def __init__(self, port, output = 1):
@@ -47,7 +49,32 @@ class DMXConnection:
 		print("Opened %s" % (self.port.portstr))
 		self.dmx_frame = [0] * 512
 		self.chan_list = {}
-		self.output = output
+		if output == 2:
+			self.label = output2
+			packet = [
+				start_val,
+				13,
+				4 & 0xFF,
+				(4 >> 8) & 0xFF
+				]
+			packet += api_key
+			packet.append(end_val)
+			self.port.write(packet)
+			time.sleep(1)
+			packet2 = [
+				start_val,
+				147,
+				2 & 0xFF,
+				(2 >> 8) & 0xFF
+				]
+			packet2 += port_set
+			packet2.append(end_val)
+			self.port.write(packet2)
+		else:
+			self.label = output1
+			
+
+
 	
 	def set_chan(self, chan, val, auto_render = False):
 		"""Sets a channel level in local channel list.
@@ -85,10 +112,6 @@ class DMXConnection:
 		newlist: bool, optional(default=True)
 			If set to true, clears the channel list.
 		"""
-		if self.output == 2:
-			label = output2
-		else:
-			label = output1
 		if clear == True: # Clear channels not specified
 			for i in range(0, 512):  
 				if i not in self.chan_list.keys():
@@ -97,7 +120,7 @@ class DMXConnection:
 			self.dmx_frame[i] = self.chan_list[i]
 		packet = [
 				start_val,
-				label,
+				self.label,
 				len(self.dmx_frame) & 0xFF,
 				(len(self.dmx_frame) >> 8) & 0xFF
 				]

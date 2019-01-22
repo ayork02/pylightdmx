@@ -2,7 +2,7 @@
 	"manufacturer": "Event Lighting",
 	"name": "RGBWAU Pro Par",
 	"shortName": "RGBWAU",
-	"type": "Colour Changer",
+	"type": "colour changer",
 	"channels": 6,
 	"availableChannels": {
 		"red": {

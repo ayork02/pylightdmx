@@ -1,7 +1,8 @@
 {
+	"manufacturer": "Rave",
 	"name": "Mini Spot Moving Head",
 	"shortName": "Mini Spot",
-	"type": "Moving Head",
+	"type": "moving head",
 	"channels": 14,
 	"availableChannels": {
 		"pan": {

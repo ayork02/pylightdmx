@@ -1,0 +1,70 @@
+{
+	"manufacturer": "Rave",
+	"name": "Led Par 64",
+	"shortName": "Par64",
+	"type": "colour changer",
+	"channels": 6,
+	"availableChannels": {
+		"intensity": {
+			"offset": 0,
+			"type": "intensity"
+		},
+		"strobe": {
+			"offset": 1,
+			"type": "strobe"
+		},
+		"red": {
+			"offset": 2,
+			"type": "colour",
+			"colour": "green"
+		},
+		"green": {
+			"offset": 3,
+			"type": "colour",
+			"colour": "green"
+		},
+		"blue": {
+			"offset": 4,
+			"type": "colour",
+			"colour": "blue"
+		},
+		"colour macros": {
+			"offset": 5,
+			"type": "macros",
+			"capabilities": {
+				"blackout": {
+					"startVal": 0,
+					"endVal": 10
+				},
+				"blue": {
+					"startVal": 11, 
+					"endVal": 30
+				},
+				"green": {
+					"startVal": 31, 
+					"endVal": 50
+				},
+				"cyan": {
+					"startVal": 51, 
+					"endVal": 70
+				},
+				"red": {
+					"startVal": 71, 
+					"endVal": 90
+				},
+				"magenta": {
+					"startVal": 91, 
+					"endVal": 110
+				},
+				"yellow": {
+					"startVal": 111, 
+					"endVal": 130
+				},
+				"white": {
+					"startVal": 131, 
+					"endVal": 255
+				}
+			}
+		}
+	}
+}

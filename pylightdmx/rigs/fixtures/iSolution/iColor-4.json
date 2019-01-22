@@ -1,0 +1,235 @@
+{
+	"manufacturer": "iSolution",
+	"name": "iColor-4",
+	"shortName": "iColor",
+	"type": "colour changer",
+	"channels": 4,
+	"availableChannels": {
+		"colour macros": {
+			"offset": 0,
+			"type": "macros",
+			"capabilities": {
+				"red": {
+					"startVal": 0,
+					"endVal": 6
+				},
+				"red/yellow": {
+					"startVal": 7,
+					"endVal": 13
+				},
+				"magenta": {
+					"startVal": 14, 
+					"endVal": 20
+				},
+				"orange": {
+					"startVal": 21, 
+					"endVal": 27
+				},
+				"yellow/red": {
+					"startVal": 28, 
+					"endVal": 34
+				},
+				"yellow": {
+					"startVal": 35, 
+					"endVal": 41
+				},
+				"yellow/green": {
+					"startVal": 42, 
+					"endVal": 48
+				},
+				"yellow/green": {
+					"startVal": 49, 
+					"endVal": 55
+				},
+				"green/yellow": {
+					"startVal": 56, 
+					"endVal": 62
+				},
+				"green/red": {
+					"startVal": 63, 
+					"endVal": 69
+				},
+				"green": {
+					"startVal": 70, 
+					"endVal": 76
+				},
+				"green/blue": {
+					"startVal": 77, 
+					"endVal": 83
+				},
+				"green/blue": {
+					"startVal": 84, 
+					"endVal": 90
+				},
+				"green/blue": {
+					"startVal": 91, 
+					"endVal": 97
+				},
+				"cyan": {
+					"startVal": 98, 
+					"endVal": 104
+				},
+				"full cyan": {
+					"startVal": 105, 
+					"endVal": 111
+				},
+				"blue/green": {
+					"startVal": 112, 
+					"endVal": 118
+				},
+				"blue/green": {
+					"startVal": 119, 
+					"endVal": 125
+				},
+				"blue/green": {
+					"startVal": 126, 
+					"endVal": 132
+				},
+				"blue/green": {
+					"startVal": 133, 
+					"endVal": 139
+				},
+				"blue": {
+					"startVal": 140, 
+					"endVal": 146
+				},
+				"blue/red": {
+					"startVal": 147, 
+					"endVal": 153
+				},
+				"magenta": {
+					"startVal": 154, 
+					"endVal": 160
+				},
+				"magenta": {
+					"startVal": 161, 
+					"endVal": 167
+				},
+				"magenta": {
+					"startVal": 168, 
+					"endVal": 174
+				},
+				"magenta": {
+					"startVal": 175, 
+					"endVal": 181
+				},
+				"magenta": {
+					"startVal": 182, 
+					"endVal": 188
+				},
+				"magenta": {
+					"startVal": 189, 
+					"endVal": 195
+				},
+				"red/blue": {
+					"startVal": 196, 
+					"endVal": 202
+				},
+				"red/blue": {
+					"startVal": 203, 
+					"endVal": 209
+				},
+				"red": {
+					"startVal": 210, 
+					"endVal": 216
+				},
+				"white": {
+					"startVal": 217, 
+					"endVal": 223
+				},
+				"colour fade": {
+					"startVal": 224, 
+					"endVal": 239
+				},
+				"colour chase": {
+					"startVal": 240, 
+					"endVal": 255
+				}
+			}
+		},
+		"chase": {
+			"offset": 1,
+			"type": "macros",
+			"capabilities": {
+				"R-G-Y-B": {
+					"startVal": 0, 
+					"endVal": 20
+				},
+				"R-Y-O-C": {
+					"startVal": 21, 
+					"endVal": 41
+				},
+				"P-B-G-dR": {
+					"startVal": 42, 
+					"endVal": 62
+				},
+				"spectrum random": {
+					"startVal": 63,
+					"endVal": 83
+				},
+				"spectrum sequence": {
+					"startVal": 84,
+					"endVal": 104
+				},
+				"dynamic": {
+					"startVal": 105,
+					"endVal": 125
+				},
+				"RG-B": {
+					"startVal": 126,
+					"endVal": 146
+				},
+				"GR-B": {
+					"startVal": 147,
+					"endVal": 167
+				},
+				"B-R": {
+					"startVal": 168,
+					"endVal": 188
+				},
+				"Y-B": {
+					"startVal": 189,
+					"endVal": 209
+				},
+				"R-G": {
+					"startVal": 210,
+					"endVal": 230
+				},
+				"Y-G": {
+					"startVal": 231,
+					"endVal": 255
+				}
+			}
+		},
+		"speed": {
+			"offset": 2,
+			"type": "speed"
+		},
+		"dimmer/strobe": {
+			"offset": 5,
+			"type": "macros",
+			"capabilities": {
+				"closed": {
+					"startVal": 0, 
+					"endVal": 7
+				},
+				"intensity 100-0%": {
+					"startVal": 8, 
+					"endVal": 134
+				},
+				"strobe slow-fast": {
+					"startVal": 135, 
+					"endVal": 239
+				},
+				"open": {
+					"startVal": 240,
+					"endVal": 255
+				}
+			}
+		},
+		"intensity": {
+			"offset": 3,
+			"type": "intensity"
+		}
+	}
+}
