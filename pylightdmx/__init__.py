@@ -47,7 +47,7 @@ class DMXConnection:
 				print("Could not open device %s. Quitting application." % port)
 				sys.exit(0)
 		print("Opened %s" % (self.port.portstr))
-		self.dmx_frame = [0] * 512
+		self.dmx_frame = [0] * 513
 		self.chan_list = {}
 		if output == 2:
 			self.label = output2
@@ -194,7 +194,7 @@ class DMXConnection:
 
 	def DBO(self):
 		"""Sets all channels to 0, causing a dead blackout"""
-		self.dmx_frame = [0] * 512
+		self.dmx_frame = [0] * 513
 		self.render() # Auto renders
 		
 	def close(self):
